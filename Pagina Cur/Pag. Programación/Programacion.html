@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROGRAMACIÓN - 12vo BTPI</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--Fondo:#000000;
+--Caja:#0a0a0a;
+--TextoPrincipal:#ffffff;
+--TextoSuave:#a9b4d8;
+--Borde:rgba(255,255,255,0.08);
+}
+
+@keyframes Aparecer{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes ZoomEntrada{
+from{transform:scale(1.1);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Plus Jakarta Sans',sans-serif;
+background-color:var(--Fondo);
+color:var(--TextoPrincipal);
+line-height:1.6;
+overflow-x:hidden;
+}
+
+.PortadaProgramacion{
+width:100%;
+height:65vh;
+position:relative;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+border-bottom:1px solid var(--Borde);
+}
+
+.PortadaProgramacion img{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.4);
+animation:ZoomEntrada 1.5s ease;
+}
+
+.TextoPortada{
+position:absolute;
+text-align:center;
+animation:Aparecer 1s ease 0.3s both;
+}
+
+.TextoPortada h1{
+font-size:clamp(3rem,10vw,7rem);
+font-weight:800;
+text-transform:uppercase;
+letter-spacing:-2px;
+}
+
+.TextoPortada p{
+color:#666;
+letter-spacing:5px;
+text-transform:uppercase;
+font-size:0.9rem;
+margin-top:10px;
+}
+
+.ContenedorGeneral{
+max-width:1200px;
+margin:0 auto;
+padding:100px 5%;
+}
+
+.SeccionBloque{
+margin-bottom:140px;
+animation:Aparecer 1.2s ease both;
+}
+
+.TituloSeccion{
+font-size:2.5rem;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.TextoMeta{
+color:var(--TextoSuave);
+margin-bottom:45px;
+font-size:1.1rem;
+}
+
+.GridContenido{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.CajaInfo{
+background:var(--Caja);
+border:1px solid var(--Borde);
+padding:45px;
+border-radius:28px;
+transition:0.4s;
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+
+.CajaInfo:hover{
+border-color:rgba(255,255,255,0.4);
+transform:translateY(-8px);
+}
+
+.CajaAncha{
+grid-column:span 2;
+padding:60px;
+}
+
+.TituloCaja{
+font-size:1.6rem;
+margin-bottom:20px;
+border-left:4px solid #fff;
+padding-left:18px;
+}
+
+.TextoCaja, .ListaCaja{
+color:var(--TextoSuave);
+font-size:1.05rem;
+}
+
+.ListaCaja li{
+margin-bottom:12px;
+}
+
+.GaleriaVisual{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+margin-bottom:30px;
+}
+
+.CajaImagen{
+border-radius:24px;
+overflow:hidden;
+border:1px solid var(--Borde);
+height:320px;
+}
+
+.CajaImagen img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.6s;
+}
+
+.CajaImagen:hover img{
+transform:scale(1.1);
+}
+
+.CajaVideo{
+border-radius:30px;
+overflow:hidden;
+border:1px solid var(--Borde);
+background:#000;
+box-shadow:0 20px 60px rgba(0,0,0,0.8);
+}
+
+video{
+width:100%;
+display:block;
+}
+
+.FooterFinal{
+padding:100px 20px;
+text-align:center;
+border-top:1px solid var(--Borde);
+color:#333;
+font-size:0.8rem;
+letter-spacing:2px;
+}
+
+@media(max-width:850px){
+.GridContenido{
+grid-template-columns:1fr;
+}
+
+.CajaAncha{
+grid-column:span 1;
+padding:40px;
+}
+
+.TextoPortada h1{
+font-size:3.5rem;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="PortadaProgramacion">
+<img src="imagen Porgra.jpg" alt="Programación">
+<div class="TextoPortada">
+<h1>Programación</h1>
+<p>Materia y Carrera Profesional</p>
+</div>
+</div>
+
+<main class="ContenedorGeneral">
+
+<section class="SeccionBloque">
+<div class="TituloSeccion">¿Qué es la Programación?</div>
+<p class="TextoMeta">Breve descripción de la materia y sus objetivos formativos.</p>
+
+<div class="GridContenido">
+
+<div class="CajaInfo">
+<div class="TituloCaja">Resumen</div>
+<p class="TextoCaja">La programación es el arte de convertir ideas en instrucciones que una computadora puede ejecutar. A través de algoritmos y estructuras se resuelven problemas reales.</p>
+</div>
+
+<div class="CajaInfo">
+<div class="TituloCaja">Temas clave</div>
+<ul class="ListaCaja">
+<li>Algoritmos y lógica</li>
+<li>Lenguajes como Python, Java y C</li>
+<li>Estructuras de datos</li>
+<li>Condicionales y bucles</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section class="SeccionBloque">
+<div class="TituloSeccion">Visual Tech</div>
+
+<div class="GaleriaVisual">
+<div class="CajaImagen"><img src="progat.jpg"></div>
+<div class="CajaImagen"><img src="sql.jpg"></div>
+</div>
+
+<div class="CajaVideo">
+<video controls poster="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=60">
+<source src="Programación.mp4">
+</video>
+</div>
+</section>
+
+<section class="SeccionBloque">
+<div class="TituloSeccion">La Carrera: Programación</div>
+<p class="TextoMeta">Visión general de salidas laborales y habilidades clave.</p>
+
+<div class="GridContenido">
+
+<div class="CajaInfo CajaAncha">
+<div class="TituloCaja">Qué hace un programador</div>
+<p class="TextoCaja">Los programadores diseñan, prueban y mantienen software. Participan en todo el proceso desde la idea hasta el mantenimiento.</p>
+</div>
+
+<div class="CajaInfo CajaAncha">
+<div class="TituloCaja">Campos y habilidades</div>
+<p class="TextoCaja">El campo es global y abarca muchas áreas:</p>
+<ul class="ListaCaja" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+<li>Desarrollo web</li>
+<li>Inteligencia artificial</li>
+<li>Ciberseguridad</li>
+<li>Videojuegos</li>
+<li>Pensamiento lógico</li>
+<li>Resolución de problemas</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer class="FooterFinal">
+<p>2026 Programación - 12vo BTPI</p>
+</footer>
+
+</body>
+</html>

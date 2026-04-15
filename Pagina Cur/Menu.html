@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú BTPI</title>
+<base target="contenido">
+
+<style>
+:root{
+--RojoBtp:#ff2a2a;
+--AzulBtp:#00bcd4;
+--Vidrio:rgba(255,255,255,0.03);
+--Borde:rgba(255,255,255,0.1);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background-color:#000;
+font-family:'Arial Black',Gadget,sans-serif;
+overflow:visible;
+}
+
+.MenuPrincipal{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:var(--Vidrio);
+backdrop-filter:blur(15px);
+border-bottom:1px solid var(--Borde);
+overflow:visible;
+}
+
+.ListaMenu{
+display:flex;
+gap:18px;
+list-style:none;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.ListaMenu a,
+.BotonMaterias{
+color:#fff;
+text-decoration:none;
+font-size:10px;
+text-transform:uppercase;
+letter-spacing:2px;
+font-weight:900;
+transition:0.3s;
+position:relative;
+padding:8px 0;
+cursor:pointer;
+}
+
+.ListaMenu li:nth-child(odd) a:hover{
+color:var(--RojoBtp);
+}
+
+.ListaMenu li:nth-child(even) a:hover{
+color:var(--AzulBtp);
+}
+
+.DivisorMenu{
+color:#333;
+font-size:12px;
+user-select:none;
+}
+
+.ItemMaterias{
+position:relative;
+}
+
+.MenuMaterias{
+position:absolute;
+left:100%;
+top:50%;
+transform:translateY(-50%);
+background:rgba(10,10,10,0.95);
+border:1px solid var(--Borde);
+border-radius:10px;
+padding:4px 8px;
+display:flex;
+gap:6px;
+width:max-content;
+opacity:0;
+visibility:hidden;
+transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+z-index:9999;
+}
+
+.ItemMaterias:hover .MenuMaterias{
+opacity:1;
+visibility:visible;
+transform:translateY(-50%) translateX(10px);
+}
+
+.MenuMaterias a{
+font-size:8px;
+padding:6px 8px;
+white-space:nowrap;
+border-right:1px solid rgba(255,255,255,0.08);
+}
+
+.MenuMaterias a:last-child{
+border-right:none;
+}
+
+.MenuMaterias a:hover{
+background:rgba(255,255,255,0.05);
+color:var(--AzulBtp);
+transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="MenuPrincipal">
+<ul class="ListaMenu">
+
+<li><a href="Pagina Curso/PaginaCurso.html">Inicio</a></li>
+<li class="DivisorMenu">/</li>
+
+<li><a href="Pagina Nosotros/Nosotros.html">Nosotros</a></li>
+<li class="DivisorMenu">/</li>
+
+<li class="ItemMaterias">
+<span class="BotonMaterias">Materias ▸</span>
+
+<div class="MenuMaterias">
+<a href="Pag. Diseño web/Diseño.html">Diseño Web</a>
+<a href="P. Digitales/P. Digitales.html">Prod. Digitales</a>
+<a href="Pag. Mantenimiento/Mantenimiento.html">Mantenimiento</a>
+<a href="Pag. Redes/Redes.html">Redes</a>
+<a href="Pag. Gestion/Gestion.html">Gestión</a>
+<a href="Pag. Programación/Programacion.html">Programación</a>
+</div>
+
+</li>
+
+<li class="DivisorMenu">/</li>
+
+<li><a href="Pagina Actividades/Actividades.html">Actividades</a></li>
+
+</ul>
+</nav>
+
+</body>
+</html>

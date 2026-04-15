@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros | 12vo BTPI 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Plus+Jakarta+Sans:wght@200;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--Fondo:#050505;
+--Vidrio:rgba(255,255,255,0.01);
+--Tarjeta:rgba(255,255,255,0.005);
+--Borde:rgba(255,255,255,0.06);
+--FuenteTitulo:'Inter',sans-serif;
+--FuenteTexto:'Plus Jakarta Sans',sans-serif;
+}
+
+@keyframes aparecer{
+0%{opacity:0;transform:translateY(30px);filter:blur(10px);}
+100%{opacity:1;transform:translateY(0);filter:blur(0);}
+}
+
+@keyframes flotar{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background-color:var(--Fondo);
+background-image:radial-gradient(circle at 50% 50%,#111 0%,#000 100%);
+color:white;
+font-family:var(--FuenteTexto);
+line-height:1.4;
+overflow-x:hidden;
+}
+
+.PortadaNosotros{
+max-width:1400px;
+margin:60px auto 40px;
+padding:50px 60px;
+text-align:left;
+animation:aparecer 1.2s cubic-bezier(0.2,1,0.2,1);
+background:var(--Vidrio);
+backdrop-filter:blur(25px);
+border-radius:35px;
+border:1px solid var(--Borde);
+}
+
+.TituloPrincipal{
+font-family:var(--FuenteTitulo);
+font-weight:900;
+font-size:clamp(45px,9vw,110px);
+line-height:0.8;
+text-transform:uppercase;
+letter-spacing:-4px;
+background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,0.3) 100%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.Subtitulo{
+display:block;
+font-weight:400;
+font-size:clamp(16px,2.5vw,30px);
+letter-spacing:10px;
+color:rgba(255,255,255,0.5);
+text-transform:uppercase;
+margin-top:12px;
+}
+
+.ContenedorGeneral{
+max-width:1500px;
+margin:0 auto;
+padding:20px 5%;
+position:relative;
+}
+
+.SeccionNosotros{
+display:flex;
+align-items:center;
+position:relative;
+min-height:650px;
+}
+
+.TarjetaNosotros{
+background:var(--Tarjeta);
+backdrop-filter:blur(20px);
+padding:60px;
+width:53%;
+border-radius:30px;
+border:1px solid var(--Borde);
+z-index:10;
+position:absolute;
+left:0;
+animation:aparecer 1.5s ease;
+}
+
+.TarjetaNosotros h2{
+font-size:clamp(1.8rem,3.8vw,3rem);
+font-weight:800;
+margin-bottom:20px;
+text-transform:uppercase;
+}
+
+.TarjetaNosotros p{
+font-size:1.1rem;
+color:rgba(255,255,255,0.65);
+font-weight:300;
+}
+
+.ImagenNosotros{
+width:75%;
+height:600px;
+margin-left:auto;
+border-radius:35px;
+overflow:hidden;
+border:1px solid var(--Borde);
+}
+
+.ImagenNosotros img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.SeccionFoto{
+max-width:800px;
+margin:80px auto;
+padding:0 5%;
+}
+
+.Fotos{
+position:relative;
+border-radius:35px;
+padding:10px;
+background:linear-gradient(145deg,rgba(255,255,255,0.1),transparent);
+border:1px solid var(--Borde);
+overflow:hidden;
+box-shadow:0 40px 80px -20px rgba(0,0,0,0.8);
+animation:aparecer 2s ease-out;
+}
+
+.Fotos img{
+width:100%;
+height:450px;
+object-fit:contain;
+display:block;
+transition:transform 1s cubic-bezier(0.2,1,0.2,1),filter 0.6s ease;
+filter:brightness(0.9) contrast(1.05);
+}
+
+.Fotos:hover img{
+transform:scale(1.03);
+filter:brightness(1) contrast(1.1);
+}
+
+.SeccionDocentes{
+max-width:1400px;
+margin:0 auto 120px;
+padding:0 5%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.TarjetaDocente{
+background:var(--Vidrio);
+backdrop-filter:blur(20px);
+border-radius:30px;
+border:1px solid var(--Borde);
+padding:40px;
+display:flex;
+align-items:center;
+gap:30px;
+transition:all 0.4s ease;
+}
+
+.TarjetaDocente:hover{
+transform:translateY(-5px);
+border-color:rgba(255,255,255,0.2);
+background:rgba(255,255,255,0.03);
+}
+
+.FotoDocente{
+width:180px;
+height:180px;
+border-radius:25px;
+border:3px solid var(--Borde);
+overflow:hidden;
+flex-shrink:0;
+animation:flotar 4s ease-in-out infinite;
+box-shadow:0 15px 30px rgba(0,0,0,0.5);
+}
+
+.FotoDocente img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:top center;
+}
+
+.InfoDocente span{
+font-size:0.8rem;
+color:rgba(255,255,255,0.4);
+text-transform:uppercase;
+letter-spacing:4px;
+display:block;
+margin-bottom:10px;
+}
+
+.InfoDocente h3{
+font-family:var(--FuenteTitulo);
+font-size:clamp(1.5rem,3vw,2.5rem);
+font-weight:700;
+background:linear-gradient(135deg,#fff 50%,rgba(255,255,255,0.2));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.FooterPromo{
+margin-top:100px;
+padding:100px 0;
+background:rgba(255,255,255,0.005);
+backdrop-filter:blur(15px);
+border-top:1px solid var(--Borde);
+text-align:center;
+}
+
+.TituloFooter{
+font-family:Impact,sans-serif;
+font-size:60px;
+letter-spacing:6px;
+text-transform:uppercase;
+background:linear-gradient(to bottom,#fff,#333);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.InfoFooter{
+font-size:10px;
+color:#444;
+letter-spacing:8px;
+text-transform:uppercase;
+margin-top:10px;
+}
+</style>
+</head>
+<body>
+
+<header class="PortadaNosotros">
+<h1 class="TituloPrincipal">Nosotros</h1>
+<span class="Subtitulo">12vo BTPI</span>
+</header>
+
+<div class="ContenedorGeneral">
+<main class="SeccionNosotros">
+<div class="TarjetaNosotros">
+<h2>12vo BTPI</h2>
+<p><b>Somos la promoción de 12vo grado de BTPI, estudiantes técnicos capacitados en informática y cursos del INFOP. Como parte de nuestro TES, realizamos actividades de mantenimiento y aseo en las instalaciones de nuestro instituto, además de brindar soporte técnico preventivo a los equipos de estudiantes y docentes en diversos centros educativos. Combinamos nuestras materias técnicas con el desarrollo de catálogos web y diseño gráfico profesional para apoyar a la comunidad. Actualmente, nos mantenemos activos en diversas actividades académicas mientras nos preparamos con disciplina para nuestra próxima práctica profesional.</b></p>
+</div>
+<div class="ImagenNosotros">
+<img src="Nosotrosjpeg.jpeg" alt="Nosotros">
+</div>
+</main>
+</div>
+
+<section class="SeccionFoto">
+<div class="Fotos">
+<img src="VaronesXD.jpeg" alt="Varones">
+</div>
+</section>
+
+<section class="SeccionDocentes">
+<div class="TarjetaDocente">
+<div class="FotoDocente">
+<img src="ProfeKarla.jpeg" alt="Profe Karla">
+</div>
+<div class="InfoDocente">
+<span>Licenciada</span>
+<h3>Karla Suyapa Andrade</h3>
+</div>
+</div>
+
+<div class="TarjetaDocente">
+<div class="FotoDocente">
+<img src="ProfeStanly.jpeg" alt="Profe Stanly">
+</div>
+<div class="InfoDocente">
+<span>Licenciado</span>
+<h3>Kebin Stanly Rodriguiéz</h3>
+</div>
+</div>
+</section>
+
+<footer class="FooterPromo">
+<h2 class="TituloFooter">12vo BTPI</h2>
+<p class="InfoFooter">Informatica</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DISEÑO WEB | 12vo BTPI 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--Fondo:#050505;
+--Caja:#0e0e10;
+--Borde:rgba(255,255,255,0.08);
+--Texto:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:var(--Fondo);
+color:#fff;
+font-family:'Plus Jakarta Sans',sans-serif;
+line-height:1.6;
+}
+
+.ZonaInicio{
+height:45vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+}
+
+.TextoMini{
+color:#888;
+letter-spacing:5px;
+font-size:0.7rem;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.TituloPrincipal{
+font-family:'Syne',sans-serif;
+font-size:clamp(3rem,10vw,7rem);
+text-transform:uppercase;
+line-height:0.9;
+margin-bottom:20px;
+}
+
+.TextoIntro{
+color:#aaa;
+max-width:600px;
+font-size:1rem;
+}
+
+.ZonaContenido{
+max-width:1200px;
+margin:0 auto;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+padding:0 25px 100px;
+}
+
+.ModuloAprendizaje{
+background:var(--Caja);
+border:1px solid var(--Borde);
+border-radius:35px;
+padding:45px;
+position:relative;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+transition:0.4s ease;
+}
+
+.ModuloAprendizaje:hover{
+transform:translateY(-5px);
+border-color:rgba(255,255,255,0.2);
+}
+
+.ModuloPrincipal{
+grid-column:span 2;
+}
+
+.TituloModulo{
+font-family:'Syne',sans-serif;
+font-size:1.8rem;
+margin-bottom:15px;
+text-transform:uppercase;
+letter-spacing:-0.02em;
+}
+
+.TextoBase{
+color:#bbb;
+font-size:0.95rem;
+line-height:1.5;
+margin-bottom:10px;
+}
+
+.ListaBase{
+list-style:none;
+color:#bbb;
+font-size:0.9rem;
+}
+
+.ListaBase li{
+margin-bottom:10px;
+border-left:2px solid #444;
+padding-left:12px;
+}
+
+.EtiquetaChip{
+padding:6px 14px;
+background:rgba(255,255,255,0.05);
+border-radius:50px;
+font-size:0.7rem;
+border:1px solid var(--Borde);
+color:#ccc;
+}
+
+.EspacioEtiquetas{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:20px;
+}
+
+.CapaVisual{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0.2;
+z-index:0;
+}
+
+.ContenidoNodo{
+position:relative;
+z-index:1;
+}
+
+.FooterFinal{
+text-align:center;
+padding:50px;
+border-top:1px solid var(--Borde);
+color:#444;
+font-size:0.7rem;
+letter-spacing:3px;
+}
+
+@media(max-width:800px){
+.ZonaContenido{
+grid-template-columns:1fr;
+}
+
+.ModuloPrincipal{
+grid-column:span 1;
+}
+
+.ModuloAprendizaje{
+padding:30px;
+}
+}
+</style>
+</head>
+<body>
+
+<header class="ZonaInicio">
+<div class="TextoMini">Materia · 12vo BTPI</div>
+<div class="TituloPrincipal">Diseño Web</div>
+<p class="TextoIntro">Aprende a crear sitios web profesionales desde cero. Diseño, código y creatividad.</p>
+</header>
+
+<main class="ZonaContenido">
+
+<div class="ModuloAprendizaje ModuloPrincipal">
+<div class="ContenidoNodo">
+<div class="TituloModulo">¿Qué hacemos?</div>
+<p class="TextoBase">Creamos sitios web completos combinando diseño y desarrollo.</p>
+<p class="TextoBase">Trabajamos proyectos reales para construir tu portafolio.</p>
+
+<div class="EspacioEtiquetas">
+<span class="EtiquetaChip">Creatividad</span>
+<span class="EtiquetaChip">Tecnología</span>
+<span class="EtiquetaChip">Proyectos</span>
+<span class="EtiquetaChip">Equipo</span>
+</div>
+</div>
+</div>
+
+<div class="ModuloAprendizaje">
+<div class="ContenidoNodo">
+<div class="TituloModulo">Herramientas</div>
+<p class="TextoBase">Usamos herramientas profesionales:</p>
+<ul class="ListaBase">
+<li>Figma</li>
+<li>Visual Studio Code</li>
+<li>Git & GitHub</li>
+<li>DevTools</li>
+</ul>
+</div>
+</div>
+
+<div class="ModuloAprendizaje">
+<img src="pagianweb.jpg" class="CapaVisual">
+<div class="ContenidoNodo">
+<div class="TituloModulo">Metodología</div>
+<p class="TextoBase">Aprendes haciendo proyectos reales.</p>
+<ul class="ListaBase">
+<li>Diseño UI</li>
+<li>HTML & CSS</li>
+<li>Responsive</li>
+<li>Publicación web</li>
+</ul>
+</div>
+</div>
+
+<div class="ModuloAprendizaje">
+<img src="codigo.jpg" class="CapaVisual">
+<div class="ContenidoNodo">
+<div class="TituloModulo">Desarrollo Web</div>
+<p class="TextoBase">Convertimos diseño en código real:</p>
+<ul class="ListaBase">
+<li>HTML</li>
+<li>CSS</li>
+<li>Responsive</li>
+<li>JavaScript básico</li>
+</ul>
+
+<div class="EspacioEtiquetas">
+<span class="EtiquetaChip">HTML</span>
+<span class="EtiquetaChip">CSS</span>
+<span class="EtiquetaChip">Grid</span>
+<span class="EtiquetaChip">Flexbox</span>
+</div>
+</div>
+</div>
+
+<div class="ModuloAprendizaje">
+<div class="ContenidoNodo">
+<div class="TituloModulo">Proyectos</div>
+<p class="TextoBase">Durante el año creas:</p>
+<ul class="ListaBase">
+<li>Portafolio</li>
+<li>Landing page</li>
+<li>Tienda virtual</li>
+<li>Blog</li>
+</ul>
+</div>
+</div>
+
+<div class="ModuloAprendizaje ModuloPrincipal">
+<div class="ContenidoNodo">
+<div class="TituloModulo">Información General</div>
+<p class="TextoBase">Materia práctica desde cero.</p>
+<ul class="ListaBase">
+<li>Duración: 1 año</li>
+<li>4 horas semanales</li>
+<li>Desde nivel básico</li>
+<li>Uso de computadora</li>
+</ul>
+
+<div class="EspacioEtiquetas">
+<span class="EtiquetaChip">Práctico</span>
+<span class="EtiquetaChip">Creativo</span>
+<span class="EtiquetaChip">Desde cero</span>
+</div>
+</div>
+</div>
+
+</main>
+
+<footer class="FooterFinal">
+2026 DISEÑO WEB - 12vo BTPI
+</footer>
+
+</body>
+</html>

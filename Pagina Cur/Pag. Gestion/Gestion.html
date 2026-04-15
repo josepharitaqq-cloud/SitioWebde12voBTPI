@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GESTIÓN EMPRESARIAL | 12vo BTPI 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--FondoBase:#050505;
+--CajaOscura:#111111;
+--ColorOro:#e2b73e;
+--TextoClaro:#ffffff;
+--TextoSuave:#a0a0a0;
+--Linea:#222222;
+}
+
+body{
+background-color:var(--FondoBase);
+font-family:'Inter',sans-serif;
+color:var(--TextoClaro);
+line-height:1.6;
+}
+
+.PortadaGestion{
+position:relative;
+height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:2rem;
+overflow:hidden;
+border-bottom:3px solid var(--ColorOro);
+}
+
+.FondoGestion{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:url('gestion.jpg');
+background-size:cover;
+background-position:center;
+filter:brightness(0.6) contrast(1.1);
+z-index:1;
+}
+
+.CapaOscura{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(5,5,5,1));
+z-index:2;
+}
+
+.ContenidoHero{
+position:relative;
+z-index:3;
+}
+
+.TextoMini{
+text-transform:uppercase;
+font-size:0.75rem;
+letter-spacing:5px;
+font-weight:700;
+color:var(--ColorOro);
+margin-bottom:1rem;
+text-shadow:0 2px 4px rgba(0,0,0,0.8);
+}
+
+.TituloHero{
+font-size:clamp(3rem,8vw,5rem);
+font-weight:800;
+text-shadow:0 4px 20px rgba(0,0,0,0.9);
+margin-bottom:0.5rem;
+}
+
+.SubTexto{
+color:#ccc;
+}
+
+.AreaGeneral{
+max-width:1100px;
+margin:-50px auto 4rem;
+padding:0 1.5rem;
+position:relative;
+z-index:4;
+}
+
+.GridIdeas{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:2rem;
+}
+
+.CajaIdea{
+background:var(--CajaOscura);
+border:1px solid var(--Linea);
+border-radius:1.2rem;
+padding:2.5rem;
+transition:0.3s ease;
+}
+
+.CajaIdea:hover{
+border-color:var(--ColorOro);
+transform:translateY(-5px);
+box-shadow:0 10px 30px rgba(226,183,62,0.05);
+}
+
+.TituloCaja{
+font-size:1.7rem;
+margin-bottom:1rem;
+color:#fff;
+}
+
+.TextoCaja{
+color:var(--TextoSuave);
+margin-bottom:1rem;
+}
+
+.ListaIdeas{
+list-style:none;
+}
+
+.ListaIdeas li{
+color:var(--TextoSuave);
+margin-bottom:0.6rem;
+display:flex;
+gap:10px;
+}
+
+.ListaIdeas li::before{
+content:"→";
+color:var(--ColorOro);
+font-weight:bold;
+}
+
+.BloquePremium{
+background:linear-gradient(90deg,#111,#0a0a0a);
+border:1px solid var(--Linea);
+border-radius:1.5rem;
+padding:3rem;
+margin:3rem 0;
+}
+
+.TituloBloque{
+font-size:2rem;
+margin-bottom:1rem;
+}
+
+.TagsArea{
+display:flex;
+flex-wrap:wrap;
+gap:0.7rem;
+margin-top:1.5rem;
+}
+
+.Tag{
+background:rgba(226,183,62,0.1);
+color:var(--ColorOro);
+padding:0.5rem 1.2rem;
+border-radius:50px;
+font-size:0.85rem;
+font-weight:600;
+border:1px solid rgba(226,183,62,0.2);
+}
+
+.FooterFinal{
+text-align:center;
+padding:4rem;
+color:#444;
+font-size:0.7rem;
+letter-spacing:4px;
+border-top:1px solid var(--Linea);
+}
+
+@media(max-width:768px){
+.PortadaGestion{
+height:50vh;
+}
+
+.BloquePremium{
+padding:1.5rem;
+}
+}
+</style>
+</head>
+<body>
+
+<section class="PortadaGestion">
+<div class="FondoGestion"></div>
+<div class="CapaOscura"></div>
+<div class="ContenidoHero">
+<div class="TextoMini">Módulo Profesional · BTPI</div>
+<div class="TituloHero">GESTIÓN<br>EMPRESARIAL</div>
+<p class="SubTexto">Estrategia, Liderazgo y Modelos de Negocio</p>
+</div>
+</section>
+
+<div class="AreaGeneral">
+
+<div class="GridIdeas">
+
+<div class="CajaIdea">
+<div class="TituloCaja">Visión de Negocio</div>
+<p class="TextoCaja">Aprendemos a interpretar el mercado para tomar decisiones que generen valor real en las organizaciones.</p>
+<ul class="ListaIdeas">
+<li>Análisis de Entorno Macro</li>
+<li>Planificación Estratégica</li>
+<li>Ética y Responsabilidad Social</li>
+</ul>
+</div>
+
+<div class="CajaIdea">
+<div class="TituloCaja">Liderazgo</div>
+<p class="TextoCaja">Desarrollo de habilidades directivas para guiar equipos hacia objetivos de alto impacto.</p>
+<ul class="ListaIdeas">
+<li>Gestión del Talento</li>
+<li>Comunicación Asertiva</li>
+<li>Resolución de Conflictos</li>
+</ul>
+</div>
+
+</div>
+
+<div class="BloquePremium">
+<div class="TituloBloque">Herramientas de Gestión</div>
+<p class="TextoCaja">Dominamos metodologías utilizadas por empresas modernas:</p>
+<div class="TagsArea">
+<span class="Tag">Canvas Model</span>
+<span class="Tag">FODA</span>
+<span class="Tag">KPIs</span>
+<span class="Tag">Marketing Mix</span>
+<span class="Tag">Finanzas</span>
+<span class="Tag">Lean Startup</span>
+</div>
+</div>
+
+<div class="GridIdeas">
+
+<div class="CajaIdea">
+<div class="TituloCaja">Finanzas</div>
+<p class="TextoCaja">Analizamos la viabilidad económica de cada proyecto.</p>
+</div>
+
+<div class="CajaIdea">
+<div class="TituloCaja">Emprendimiento</div>
+<p class="TextoCaja">Creamos negocios escalables desde la idea hasta su lanzamiento.</p>
+</div>
+
+</div>
+
+</div>
+
+<footer class="FooterFinal">
+	2026 GESTION EMPRESARIAL · 12vo BTPI
+</footer>
+
+</body>
+</html>

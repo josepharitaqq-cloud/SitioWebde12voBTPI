@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANTENIMIENTO | 12vo BTPI 2026 </title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root
+{
+--bg:#0a0000;
+--card:#140202;
+--accent:#ff0000;
+--border:#2d0505;
+--text-gray:#b3a2a2;
+}
+
+*
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body
+{
+background:var(--bg);
+font-family:'Plus Jakarta Sans',sans-serif;
+color:#fff;
+line-height:1.6;
+}
+
+.encabezadoPrincipal
+{
+padding:100px 5% 40px;
+text-align:center;
+}
+
+.encabezadoPrincipal span
+{
+color:var(--accent);
+text-transform:uppercase;
+letter-spacing:5px;
+font-size:.8rem;
+font-weight:800;
+display:block;
+margin-bottom:10px;
+}
+
+.encabezadoPrincipal h1
+{
+font-family:'Archivo Black',sans-serif;
+font-size:clamp(3rem,15vw,9rem);
+text-transform:uppercase;
+line-height:.8;
+background:linear-gradient(to bottom,#fff 40%,var(--accent));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+letter-spacing:-5px;
+}
+
+.contenedorServicios
+{
+max-width:1300px;
+margin:auto;
+padding:0 20px 100px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.bloquePrincipal
+{
+grid-column:span 3;
+background:var(--card);
+padding:60px;
+border-radius:50px;
+border:1px solid var(--border);
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:40px;
+align-items:center;
+}
+
+.bloquePrincipal h2
+{
+font-family:'Archivo Black',sans-serif;
+font-size:2.5rem;
+margin-bottom:20px;
+color:var(--accent);
+text-transform:uppercase;
+}
+
+.bloquePrincipal p
+{
+color:var(--text-gray);
+font-size:1.05rem;
+margin-bottom:15px;
+}
+
+.tarjetaModulo
+{
+background:var(--card);
+padding:45px;
+border-radius:40px;
+border:1px solid var(--border);
+transition:.4s ease;
+}
+
+.tarjetaModulo:hover
+{
+border-color:var(--accent);
+transform:translateY(-5px);
+box-shadow:0 10px 30px rgba(255,0,0,.1);
+}
+
+.tarjetaModulo h3
+{
+font-family:'Archivo Black',sans-serif;
+margin-bottom:20px;
+font-size:1.4rem;
+text-transform:uppercase;
+}
+
+.tarjetaModulo ul
+{
+list-style:none;
+color:var(--text-gray);
+}
+
+.tarjetaModulo li
+{
+margin-bottom:12px;
+padding-bottom:12px;
+border-bottom:1px solid #250505;
+font-size:.95rem;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.tarjetaModulo li::before
+{
+content:"";
+width:4px;
+height:4px;
+background:var(--accent);
+border-radius:50%;
+}
+
+.seccionHeroTecnica
+{
+grid-column:span 3;
+height:500px;
+border-radius:50px;
+background:linear-gradient(rgba(10,0,0,.8),rgba(255,0,0,.2)),url('M.jpeg');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+padding:60px;
+border:1px solid var(--border);
+}
+
+.seccionHeroTecnica h2
+{
+font-family:'Archivo Black',sans-serif;
+font-size:clamp(2rem,5vw,3.5rem);
+line-height:1;
+text-transform:uppercase;
+max-width:800px;
+}
+
+footer
+{
+padding:80px 0;
+text-align:center;
+color:#550000;
+font-size:.7rem;
+letter-spacing:4px;
+text-transform:uppercase;
+}
+
+@media(max-width:900px)
+{
+.contenedorServicios
+{
+grid-template-columns:1fr;
+}
+
+.bloquePrincipal
+{
+grid-template-columns:1fr;
+padding:30px;
+}
+
+.bloquePrincipal,
+.tarjetaModulo,
+.seccionHeroTecnica
+{
+grid-column:span 1;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header class="encabezadoPrincipal">
+<span>Centro de Soporte Técnico</span>
+<h1>CORE SERVICE</h1>
+</header>
+
+<main class="contenedorServicios">
+
+<section class="bloquePrincipal">
+<div>
+<h2>Centro de Diagnóstico y Reparación</h2>
+<p>En este módulo aprendemos el funcionamiento interno de los equipos informáticos, identificando hardware, software y su interacción dentro del sistema.</p>
+<p>Realizamos mantenimiento preventivo, instalación de sistemas operativos, reparación de fallas y optimización de equipos para mejorar su rendimiento.</p>
+</div>
+
+<div style="background:#1a0000; padding:35px; border-radius:30px; border:2px solid var(--accent);">
+<h4 style="color:var(--accent); margin-bottom:15px; font-weight:800;">ÁREAS DE TRABAJO</h4>
+<p style="font-size:.9rem; color:#a37c7c;">
+• Ensamble de equipos<br>
+• Diagnóstico técnico<br>
+• Instalación de software<br>
+• Limpieza interna<br>
+• Redes básicas
+</p>
+</div>
+</section>
+
+<div class="tarjetaModulo">
+<h3>Núcleo de Hardware</h3>
+<ul>
+<li>Procesador y placa base.</li>
+<li>Memoria RAM y almacenamiento.</li>
+<li>Fuente de alimentación.</li>
+<li>Periféricos del sistema.</li>
+</ul>
+</div>
+
+<div class="tarjetaModulo">
+<h3>Unidad de Reparación</h3>
+<ul>
+<li>Sustitución de componentes dañados.</li>
+<li>Formateo e instalación limpia.</li>
+<li>Corrección de errores del sistema.</li>
+<li>Optimización de drivers.</li>
+</ul>
+</div>
+
+<div class="tarjetaModulo">
+<h3>Mantenimiento Preventivo</h3>
+<ul>
+<li>Limpieza interna de equipos.</li>
+<li>Cambio de pasta térmica.</li>
+<li>Protección contra virus.</li>
+<li>Respaldo de información.</li>
+</ul>
+</div>
+
+<section class="seccionHeroTecnica">
+<p style="color:var(--accent); font-weight:bold; margin-bottom:10px; letter-spacing:2px;">
+SERVICIO TÉCNICO AVANZADO
+</p>
+<h2>Optimizando equipos y prolongando su vida útil con mantenimiento profesional.</h2>
+</section>
+
+</main>
+
+<footer>
+2026 MANTENIMIENTO - 12vo BTPI
+</footer>
+
+</body>
+</html>

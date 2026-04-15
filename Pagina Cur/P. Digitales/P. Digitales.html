@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRODUCCIONES DIGITALES | 12vo BTPI</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--Acento:#ff3e3e;
+--Fondo:#000000;
+--Superficie:#111;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background-color:var(--Fondo);
+font-family:'Inter',sans-serif;
+color:#fff;
+line-height:1.5;
+}
+
+.PortadaProduccion{
+padding:100px 5% 50px;
+text-align:center;
+}
+
+.TituloPrincipal h1{
+font-family:'Archivo Black',sans-serif;
+font-size:clamp(3rem,15vw,10rem);
+text-transform:uppercase;
+line-height:0.8;
+background:linear-gradient(to bottom,#fff,#333);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+letter-spacing:-5px;
+}
+
+.SeccionContenido{
+max-width:1100px;
+margin:0 auto;
+padding:50px 20px;
+}
+
+.BloqueInformacion{
+display:grid;
+grid-template-columns:1.2fr 0.8fr;
+gap:40px;
+align-items:center;
+margin-bottom:80px;
+}
+
+.TextoInformacion h2{
+font-size:2.5rem;
+color:var(--Acento);
+margin-bottom:20px;
+}
+
+.TextoInformacion p{
+font-size:1.2rem;
+color:#ccc;
+margin-bottom:15px;
+}
+
+.MarcoImagen{
+width:100%;
+height:400px;
+background:#222;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+border:1px solid #333;
+}
+
+.ImagenTrabajo{
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0.8;
+display:block;
+}
+
+.Aprendizaje{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:50px;
+}
+
+.TarjetaInfo{
+background:var(--Superficie);
+padding:30px;
+border-radius:20px;
+border:1px solid #222;
+}
+
+.TarjetaInfo h4{
+color:var(--Acento);
+margin-bottom:10px;
+font-size:1.2rem;
+}
+
+.SeccionApps{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:100px;
+}
+
+.App{
+padding:40px;
+border-radius:30px;
+position:relative;
+overflow:hidden;
+}
+
+.AppPhotoshop{
+background:#001E36;
+border:1px solid #31A8FF;
+}
+
+.AppIllustrator{
+background:#331C00;
+border:1px solid #FF9A00;
+}
+
+.App h3{
+font-size:2rem;
+margin-bottom:15px;
+}
+
+.ListaCaracteristicas{
+list-style:none;
+margin-top:15px;
+}
+
+.ListaCaracteristicas li{
+font-size:0.9rem;
+margin-bottom:8px;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.ListaCaracteristicas li::before{
+content:"→";
+}
+
+@media (max-width:850px){
+.BloqueInformacion,
+.SeccionApps{
+grid-template-columns:1fr;
+}
+
+.TituloPrincipal h1{
+letter-spacing:-2px;
+}
+
+.MarcoImagen{
+height:300px;
+}
+}
+</style>
+</head>
+<body>
+
+<section class="PortadaProduccion">
+<div class="TituloPrincipal">
+<h1>PRODUCCIONES<br>DIGITALES</h1>
+</div>
+</section>
+
+<div class="SeccionContenido">
+
+<div class="BloqueInformacion">
+<div class="TextoInformacion">
+<h2>¿Qué aprendemos?</h2>
+<p>Producciones Digitales es la materia donde la creatividad se encuentra con la tecnología. No solo se trata de hacer dibujos, sino de entender cómo funciona la comunicación visual moderna.</p>
+<p>Aprendemos el flujo de trabajo real que usan las agencias: desde el concepto inicial hasta la exportación final para redes sociales, impresión o web.</p>
+</div>
+
+<div class="MarcoImagen">
+<img src="photo.jpg" class="ImagenTrabajo">
+</div>
+</div>
+
+<div class="Aprendizaje">
+<div class="TarjetaInfo">
+<h4>Teoría del Color</h4>
+<p>Psicología de los colores y cómo usarlos para transmitir emociones en un diseño profesional.</p>
+</div>
+
+<div class="TarjetaInfo">
+<h4>Composición Visual</h4>
+<p>Reglas de oro como la ley de tercios y el equilibrio para que tus diseños se vean ordenados.</p>
+</div>
+
+<div class="TarjetaInfo">
+<h4>Formatos y Exportación</h4>
+<p>Diferencia entre JPG, PNG, PDF, SVG y cómo preparar archivos para imprenta o pantalla.</p>
+</div>
+</div>
+
+<div class="SeccionApps">
+
+<div class="App AppPhotoshop">
+<span style="color:#31A8FF;font-weight:bold;">EDICIÓN DE IMAGEN</span>
+<h3>Adobe Photoshop</h3>
+<p>El estándar para retocar fotos y crear montajes imposibles.</p>
+<ul class="ListaCaracteristicas">
+<li>Uso avanzado de capas y máscaras.</li>
+<li>Eliminación de fondos y limpieza de piel.</li>
+<li>Creación de carteles y banners digitales.</li>
+</ul>
+</div>
+
+<div class="App AppIllustrator">
+<span style="color:#FF9A00;font-weight:bold;">DISEÑO VECTORIAL</span>
+<h3>Adobe Illustrator</h3>
+<p>La herramienta para logos que nunca se pixelen.</p>
+<ul class="ListaCaracteristicas">
+<li>Dominio de la herramienta Pluma (Pen Tool).</li>
+<li>Creación de personajes e ilustraciones.</li>
+<li>Diseño de identidad visual y logos.</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<footer style="padding:100px 0;text-align:center;color:#444;">
+ 2026 PRODUCCIONES DIGITALES · 12vo BTPI
+</footer>
+
+</body>
+</html>
